@@ -1,6 +1,6 @@
 {
   "name": "onewallet.library.mongoprojectionstore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ProjectionStore implementation for MongoDB",
   "main": "build/index.js",
   "scripts": {
