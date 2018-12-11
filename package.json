@@ -10,10 +10,10 @@
   },
   "author": "High Output Ventures",
   "peerDependencies": {
-    "@types/mongoose": "5.3.x",
-    "mongoose": "5.3.x",
+    "@types/mongoose": ">= 5.3.4 < 6",
+    "mongoose": ">= 5.3.15 < 6",
     "onewallet.library.framework": "git+https://github.com/Proto-Garage/onewallet.library.framework.git#v0.17.2",
-    "typescript": "^3.x.x"
+    "typescript": "3.x"
   },
   "devDependencies": {
     "@types/mongoose": "^5.3.4",
