@@ -6,8 +6,7 @@
   "scripts": {
     "clean": "rimraf build/",
     "build": "npm run clean && tsc",
-    "lint": "tslint --project tsconfig.json",
-    "install": "npm run build"
+    "lint": "tslint --project tsconfig.json"
   },
   "author": "High Output Ventures",
   "peerDependencies": {
