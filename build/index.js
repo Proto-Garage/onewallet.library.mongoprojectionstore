@@ -1,12 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
+const mongoose_1 = require("mongoose");
 class default_1 {
-    constructor() {
-        const schema = new mongoose_1.default.Schema({
+    constructor(connection) {
+        const schema = new mongoose_1.Schema({
             _id: {
                 type: String,
                 required: true,
@@ -23,7 +20,7 @@ class default_1 {
                 delete ret.__v;
             },
         });
-        this.model = mongoose_1.default.model('Projection', schema);
+        this.model = connection.model('Projection', schema);
     }
     async initialize() {
         await this.model.init();

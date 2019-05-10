@@ -1,5 +1,5 @@
 import { ProjectionStore, ID } from 'onewallet.library.framework';
-import mongoose from 'mongoose';
+import { Connection, Document, Model, Schema } from 'mongoose';
 
 interface ProjectionAttributes {
   id: string;
@@ -7,9 +7,9 @@ interface ProjectionAttributes {
 }
 
 export default class implements ProjectionStore {
-  private model: mongoose.Model<mongoose.Document & ProjectionAttributes>;
-  constructor() {
-    const schema = new mongoose.Schema({
+  private model: Model<Document & ProjectionAttributes>;
+  constructor(connection: Connection) {
+    const schema = new Schema({
       _id: {
         type: String,
         required: true,
@@ -28,7 +28,7 @@ export default class implements ProjectionStore {
       },
     });
 
-    this.model = mongoose.model<mongoose.Document & ProjectionAttributes>(
+    this.model = connection.model<Document & ProjectionAttributes>(
       'Projection',
       schema
     );
