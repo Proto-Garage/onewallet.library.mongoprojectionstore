@@ -6,21 +6,21 @@
   "scripts": {
     "clean": "rimraf build/",
     "build": "npm run clean && tsc",
-    "lint": "tslint --project tsconfig.json"
+    "lint": "tslint --project tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "npm run build"
   },
   "author": "High Output Ventures",
+  "dependencies": {
+    "onewallet.library.framework": "git+https://github.com/Proto-Garage/onewallet.library.framework.git#semver:^2.13.0",
+    "p-queue": "^6.2.1"
+  },
   "devDependencies": {
     "@types/mongoose": "^5.5.0",
     "husky": "^2.2.0",
-    "onewallet.library.framework": "git+https://github.com/Proto-Garage/onewallet.library.framework.git#v1.10.2",
+    "pretty-quick": "^2.0.1",
     "rimraf": "^2.6.3",
     "tslint": "^5.16.0",
-    "typescript": "^3.4.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build && git add build/",
-      "pre-push": "npm run lint"
-    }
+    "typescript": "^3.7.2"
   }
 }
