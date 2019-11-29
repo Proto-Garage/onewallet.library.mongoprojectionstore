@@ -21,10 +21,12 @@ export default class implements ProjectionStore {
     });
 
     schema.set('toJSON', {
-      transform: function(doc: any, ret: any) {
+      transform: (doc: any, ret: any) => {
+        /* eslint-disable */
         ret.id = doc.id;
         delete ret._id;
         delete ret.__v;
+        /* eslint-enable */
       },
     });
 
