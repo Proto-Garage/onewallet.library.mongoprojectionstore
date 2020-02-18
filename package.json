@@ -14,7 +14,7 @@
   "dependencies": {
     "@types/mongoose": "^5.5.0",
     "mongoose": "^5.7.12",
-    "onewallet.library.framework": "git+https://github.com/Proto-Garage/onewallet.library.framework.git#semver:^2.13.0",
+    "onewallet.library.framework": "git+https://github.com/Proto-Garage/onewallet.library.framework.git#semver:^2.23.0",
     "p-queue": "^6.2.1"
   },
   "devDependencies": {
